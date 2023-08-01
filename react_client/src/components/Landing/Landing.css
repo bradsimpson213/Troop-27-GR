@@ -1,0 +1,48 @@
+.landing-graphic {
+    width: 500px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 20px;
+}
+
+.landing-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-right: 20px;
+}
+
+.landing-text-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
+}
+
+.landing-title {
+    font-size: 85px;
+    font-weight: bold;
+    color:whitesmoke
+}
+
+.landing-sub-title {
+    font-size: 30px;
+    margin: none;
+    color: whitesmoke;
+}
+
+.landing-quote {
+    font-family: Caveat;
+    color: orange;
+    font-size: 28px;
+    font-weight: bold;
+    margin: none;
+}
+
+.landing-author {
+    color: whitesmoke;
+    font-style: italic;
+    font-size: 18px;
+    margin: none;
+    align-self: flex-end;
+}
