@@ -6,6 +6,7 @@ import LoginFormPage from "./components/LoginFormPage";
 import AppNavBar from "./components/AppNavBar";
 import { authenticate } from "./store/session";
 import Landing from './components/Landing';
+import Footer from './components/Footer'
 // import Navigation from "./components/Navigation";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           </Switch>
         </div>
       )}
+      <Footer />
     </>
   );
 }

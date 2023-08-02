@@ -1,37 +1,57 @@
 import * as React from 'react';
-import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 // Style import
 import "./Landing.css"
 import campPic from "./campsite.png"
 
+
 const Landing = () => {
   return (
-    <Paper 
-        elevation={3}
-        sx={{
-            width: "auto",
-            heigh: "auto",
-            bgcolor: "darkgreen",
-            color: "whitesmoke",
-            fontFamily: "Roboto",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            border: 2,
-            borderColor: "whitesmoke",
-            borderRadius: "10px",
-            padding: "10px",
-        }} 
-    >
-        <div  className="landing-text-container">
+    <div className="landing-wrapper">    
+        <div className="landing-text-container">
             <div className="landing-text-sub-container">
-                <p className="landing-title">BSA Troop 27</p>
-                <p className="landing-sub-title">Glen Rock, NJ</p>
+                <p className="landing-title"> BSA Troop 27 </p>
+                <p className="landing-sub-title"> Glen Rock, NJ </p>
             </div>
-            <div>
-                <p className="landing-quote">"Scouting is all about learning stuff, and burning stuff..."</p>
-                <p className="landing-author"> - A. Mazuti </p>    
+            <div className="landing-text-container">
+                <p className="landing-quote"> "Scouting is all about learning stuff, and burning stuff..." </p>
+                <p className="landing-author">  - A. Mazuti </p>    
+            </div>
+            <div className='button-div'>
+                <Button 
+                    variant="outlined" 
+                    size="large"
+                    sx={{
+                        color: "whitesmoke",
+                        border: 3,
+                        borderColor: "whitesmoke",
+                        borderRadius: 2,
+                        margin: 2,
+                        bgcolor: "darkgreen",
+                       '&:hover': {
+                            bgcolor: "orange",
+                        }
+                    }} 
+                >
+                    Log In
+                </Button>
+                <Button 
+                    variant="outlined"
+                    size="large"
+                    sx={{
+                        color: "whitesmoke",
+                        border: 3,
+                        borderColor: "whitesmoke",
+                        borderRadius: 2,
+                        margin: 2,
+                        bgcolor: "darkgreen",
+                        '&:hover': {
+                            bgcolor: "orange",
+                        }
+                    }} 
+                >
+                    Sign Up
+                </Button>
             </div>
         </div>
         <img 
@@ -39,7 +59,8 @@ const Landing = () => {
             className="landing-graphic"
             alt="camping logo"
         />
-    </ Paper>
+       
+    </div>
   );
 }
 

@@ -18,7 +18,7 @@ import campIcon from "./camp2.png"
 // Style import
 import "./AppNavBar.css"
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Meetings', 'Feed', 'Roster'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -44,11 +44,12 @@ const ResponsiveAppBar = () => {
     <AppBar 
       position="static"
       sx={{
+        height: 80,
         bgcolor: "darkgreen",
         border: 2,
         borderColor: "whitesmoke",
         borderRadius: "10px",
-        marginBottom: "10px",
+        marginBottom: "8px",
         padding: "5px",
       }} 
     >
@@ -70,12 +71,13 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'none', md: 'flex' },
                 fontFamily: 'Roboto',
                 fontWeight: 700,
-                letterSpacing: '.3rem',
+                fontSize: 25,
+                letterSpacing: '.2rem',
                 color: 'white',
                 textDecoration: 'none',
             }}
         >
-            Troup 27
+            Troop 27
         </Typography>
 
         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

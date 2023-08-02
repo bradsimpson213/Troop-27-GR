@@ -1,3 +1,19 @@
+.landing-wrapper {
+    box-sizing: border-box;
+    height: calc(100vh - 140px);
+    /* height: auto; */
+    margin: 0;
+    padding: 0;
+    background-color: darkgreen;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
 .landing-graphic {
     width: 500px;
     margin-top: 100px;
@@ -6,43 +22,54 @@
 }
 
 .landing-text-container {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
-    align-items: flex-start; 
+    /* align-items: stretch;  */
+    /* justify-content: center; */
     margin-right: 20px;
 }
 
 .landing-text-sub-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     color: black;
 }
 
 .landing-title {
     font-size: 85px;
     font-weight: bold;
-    color:whitesmoke
+    color:whitesmoke;
+    margin: 0;
 }
 
 .landing-sub-title {
     font-size: 30px;
-    margin: none;
+    margin: 0;
     color: whitesmoke;
 }
 
 .landing-quote {
     font-family: Caveat;
     color: orange;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
-    margin: none;
+    margin: 0;
+    margin-top: 60px;
 }
 
 .landing-author {
     color: whitesmoke;
     font-style: italic;
     font-size: 18px;
-    margin: none;
-    align-self: flex-end;
+    margin: 0;
+    text-align: right;
+}
+
+.button-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
