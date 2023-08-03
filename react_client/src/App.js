@@ -12,29 +12,27 @@ import Footer from './components/Footer'
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    dispatch(authenticate()).then(() => setIsLoaded(true));
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(authenticate()).then(() => setIsLoaded(true));
+  // }, [dispatch]);
 
   return (
     <>
       {/* <Navigation isLoaded={isLoaded} /> */}
       <AppNavBar />
-      {isLoaded && (
-        <div>
+      {/* {isLoaded && ( */}
           <Switch>
-            <Route path="/" >
+            <Route exact path="/" >
               <Landing />
             </Route>
-            <Route path="/login" >
+            <Route exact path="/login" >
               <LoginFormPage />
             </Route>
-            <Route path="/signup" >
+            <Route exact path="/signup" >
               <SignupFormPage />
             </Route>
           </Switch>
-        </div>
-      )}
+      {/* )} */}
       <Footer />
     </>
   );
