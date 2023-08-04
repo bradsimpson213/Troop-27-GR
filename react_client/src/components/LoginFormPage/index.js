@@ -15,7 +15,7 @@ const LoginFormPage = () => {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  // if (sessionUser) return <Redirect to="/" />;
+  if (sessionUser) return <Redirect to="/" />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,6 +31,7 @@ const LoginFormPage = () => {
       <img
         src={ logImage }
         className="login-image"
+        alt="its a log"
       />
       <div className="login-box">
         <h1 className="login-title"> Log On </h1>
@@ -82,15 +83,15 @@ const LoginFormPage = () => {
                     bgcolor: "orange",
                 }
             }}
-            // onClick={ () => history.push("/signup")}  
         >
           Log On
         </ Button>
         </form>
       </div>
       <img 
-      src={ logImage }
-      className="login-image"
+        src={ logImage }
+        className="login-image"
+        alt="its a log"
       />
       
     </div>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useHistory, Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
 // Style import
 import "./Landing.css"
@@ -37,7 +37,7 @@ const Landing = () => {
                         }}
                         onClick={ () => history.push("/login")} 
                     >
-                        Log In
+                        Log On
                     </Button>
                     <Button 
                         variant="outlined"
