@@ -64,3 +64,16 @@
 .login-input::placeholder {
     color:  gray;
 }
+
+.login-note-text {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.login-link {
+    text-decoration: none;
+    color: blue;
+    font-style: normal;
+    font-weight: bold;
+    padding-left: 8px;
+}

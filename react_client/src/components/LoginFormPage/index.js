@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { login } from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 
 import { Redirect } from "react-router-dom";
@@ -67,7 +68,7 @@ const LoginFormPage = () => {
               required
               className="login-input"
               placeholder="••••••••"
-           />
+          />
           <Button 
             variant="outlined"
             size="large"
@@ -86,7 +87,18 @@ const LoginFormPage = () => {
         >
           Log On
         </ Button>
+
         </form>
+        <p className="login-note-text">
+          Not a member?  Head over to
+          <Link 
+            className="login-link"
+            to="/signup"
+          >
+            Sign Up
+          </Link>  
+        </p>
+        
       </div>
       <img 
         src={ logImage }
