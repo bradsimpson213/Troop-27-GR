@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, JsonResponse
 # from .forms import UserForm, UserProfileInfoForm
 # from django.http import HttpResponseRedirect
 # from django.contrib.auth.decorators import login_required
