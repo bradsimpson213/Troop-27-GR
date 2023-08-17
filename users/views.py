@@ -1,8 +1,8 @@
-from django.shortcuts import render, JsonResponse
+from django.shortcuts import render
 # from .forms import UserForm, UserProfileInfoForm
-# from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 # from django.contrib.auth.decorators import login_required
-# from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout
 
 
 def user_login(request):
