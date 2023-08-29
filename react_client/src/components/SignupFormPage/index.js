@@ -47,7 +47,7 @@ function SignupFormPage() {
           <input
             type="text"
             value={firstName}
-            onChange={(e) => setFirstNam(e.target.value)}
+            onChange={(e) => setFirstName(e.target.value)}
             required
             className="signup-input"
           />
@@ -57,7 +57,7 @@ function SignupFormPage() {
           <input
             type="text"
             value={lastName}
-            onChange={(e) => setlastName(e.target.value)}
+            onChange={(e) => setLastName(e.target.value)}
             required
             className="signup-input"
           />

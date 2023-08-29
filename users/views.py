@@ -5,6 +5,24 @@ from django.http import HttpResponseRedirect, JsonResponse
 from django.contrib.auth import authenticate, login, logout
 
 
+
+def user_auth(request):
+    """this function will check to see if a user is authenticated, 
+    and if so will return the user info in a dictionary"""
+    user = get_user(request)
+    if user and user.is_authenticated():
+        response = {
+            "id": user.id,
+            "username": user.username,
+            "firstName": user.first_name,
+            "lastName": user.last_name,
+            "lastLogin": user.last_login,
+            "dateJoined": user.date_joined
+        }
+        return JsonResponse(response)
+
+# need to test auth route but will want to refactor login first
+
 def user_login(request):
     
     if request.method == 'POST':
@@ -30,7 +48,7 @@ def user_login(request):
         return render(request, "CIA_users/login.html")
 
 
-@login_required
+
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/') 

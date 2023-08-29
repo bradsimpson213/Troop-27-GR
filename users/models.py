@@ -14,7 +14,7 @@ class UserProfile(models.Model):
         ("Parent", "Parent"),
         ("leader", "Leader"),
     ]
-    role = models.CharField(choices=role_options, default="Scout")
+    role = models.CharField(max_length=15, choices=role_options, default="Scout")
     created = models.DateField(auto_now_add=True) # Will do a datetime.date.now() only 1 time when the row is created
     updated = models.DateField(auto_now=True) # Will do a datetime.date.now() every time a row is updated
 
@@ -39,7 +39,7 @@ class ScoutProfile(models.Model):
         ("Outdoor Ethics Guide", "Outdoor Ethics Guide"),
         ("JA Scoutmaster", "Junior Assistant Scoutmaster"),
     ]
-    position = models.CharField(choices=scout_positions)
+    position = models.CharField(max_length=35, choices=scout_positions)
     scout_ranks = [
         ("Scout", "Scout"),
         ("Tenderfoot", "Tenderfoot"),
@@ -49,7 +49,7 @@ class ScoutProfile(models.Model):
         ("Life", "Life"),
         ("Eagle", "Eagle"),
     ]
-    rank = models.CharField(choices=scout_ranks, default="Scout")
+    rank = models.CharField(max_length=25, choices=scout_ranks, default="Scout")
     # add in merit badge attribute once model is done
     # merit_badges = model.ManyToManyField(MeritBadge, on_delete=models.CASCADE)
 
@@ -58,7 +58,7 @@ class ParentProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone = models.CharField(max_length=15)
     # this will store the Parent's scouts/children
-    children = models.ManyToManyField(User)
+    # kids = models.ManyToManyField(User)
 
 
 class LeaderProfile(models.Model):
@@ -72,6 +72,6 @@ class LeaderProfile(models.Model):
         ("Committee Member", "Committee Member"),
         ("Charter Organization Representative","Charter Organization Representative"),
     ]
-    position = models.CharField(choices=leader_positions)
+    position = models.CharField(max_length=55, choices=leader_positions)
     # add in merit badge attribute once model is done
     # merit_badges = model.ManyToManyField(MeritBadge, on_delete=models.CASCADE)
